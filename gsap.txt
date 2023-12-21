@@ -1,0 +1,7 @@
+Gsap adalah manipulator property di sebuah element
+bisa digunakan untuk DOM, SVG, dll
+bisa untuk 2d maupun 3d
+bisa dipakai untuk framework seperti reactjs, vue dll
+bisa dipakai untuk projek sederhana seperti html, css dan js
+
+gunakan cdn
