@@ -14,29 +14,33 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Icon Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <title>Landing Page 🔹 Rai</title>
   </head>
   <body>
     <!-- Navbar Start -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#home"><strong>BahasKoding</strong></a>
+        <a class="navbar-brand" href="#home"
+          ><strong class="fw-normal fs-4"><span class="text-dark">Bahas</span>Koding</strong></a
+        >
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link active" href="#home">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
+              <a class="nav-link active" href="#about">Tentang Saya</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#project">Projects</a>
+              <a class="nav-link active" href="#project">Portofolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link active" href="#contact">Kontak</a>
             </li>
           </ul>
         </div>
@@ -46,14 +50,21 @@
 
     <!-- Jumbotron Start -->
     <section class="jumbotron text-center" id="home">
-      <img src="img/rai (2).JPG" alt="Rai Rakhmat" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4"><strong>Rai Rakhmat ~</strong></h1>
-      <p class="lead"><strong>Student | Content Creator | Web Developer</strong></p>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <img src="img/raiblob2.png" alt="Rai Rakhmat" width="350" />
+      <h1 class="display-4"><strong class="fw-normal">Rai Rakhmat</strong><span class="text-muted fw-normal"> Syarifudin Supardi</span></h1>
+      <p class="lead fs-2"><strong>Seorang Mahasiswa & Konten Kreator</strong></p>
+
+      <svg id="wave" style="transform: rotate(0deg); transition: 0.3s" viewBox="0 0 1440 360" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+            <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+          </linearGradient>
+        </defs>
         <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,256L48,256C96,256,192,256,288,240C384,224,480,192,576,202.7C672,213,768,267,864,277.3C960,288,1056,256,1152,250.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          style="transform: translate(0, 0px); opacity: 1"
+          fill="url(#sw-gradient-0)"
+          d="M0,144L80,162C160,180,320,216,480,198C640,180,800,108,960,78C1120,48,1280,60,1440,90C1600,120,1760,168,1920,186C2080,204,2240,192,2400,174C2560,156,2720,132,2880,144C3040,156,3200,204,3360,192C3520,180,3680,108,3840,84C4000,60,4160,84,4320,96C4480,108,4640,108,4800,132C4960,156,5120,204,5280,192C5440,180,5600,108,5760,108C5920,108,6080,180,6240,210C6400,240,6560,228,6720,216C6880,204,7040,192,7200,192C7360,192,7520,204,7680,198C7840,192,8000,168,8160,168C8320,168,8480,192,8640,204C8800,216,8960,216,9120,222C9280,228,9440,240,9600,240C9760,240,9920,228,10080,210C10240,192,10400,168,10560,144C10720,120,10880,96,11040,120C11200,144,11360,216,11440,252L11520,288L11520,360L11440,360C11360,360,11200,360,11040,360C10880,360,10720,360,10560,360C10400,360,10240,360,10080,360C9920,360,9760,360,9600,360C9440,360,9280,360,9120,360C8960,360,8800,360,8640,360C8480,360,8320,360,8160,360C8000,360,7840,360,7680,360C7520,360,7360,360,7200,360C7040,360,6880,360,6720,360C6560,360,6400,360,6240,360C6080,360,5920,360,5760,360C5600,360,5440,360,5280,360C5120,360,4960,360,4800,360C4640,360,4480,360,4320,360C4160,360,4000,360,3840,360C3680,360,3520,360,3360,360C3200,360,3040,360,2880,360C2720,360,2560,360,2400,360C2240,360,2080,360,1920,360C1760,360,1600,360,1440,360C1280,360,1120,360,960,360C800,360,640,360,480,360C320,360,160,360,80,360L0,360Z"
         ></path>
       </svg>
     </section>
@@ -64,15 +75,19 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>About Me</h2>
+            <h2 class="fs-1">Tentang Saya</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4">
-            <p class="fs-5 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quasi et quam quae nulla omnis molestiae repellendus laborum consequatur commodi.</p>
+          <div class="col-md-6">
+            <p class="fs-3 text-center fw-normal">Riwayat Pendidikan</p>
+            <p class="fs-5">- Universitas Bung Karno | Sistem Informasi</p>
+            <p class="fs-5">- SMK Negeri 1 Cibinong | Rekayasa Perangkat Lunak</p>
           </div>
-          <div class="col-md-4">
-            <p class="fs-5 text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quibusdam odio eum voluptatem sit ad ex iure voluptates quaerat, fuga error adipisci libero sapiente at.</p>
+          <div class="col-md-6">
+            <p class="fs-3 text-center fw-normal">Keahlian</p>
+            <p class="fs-5">- Web Development = HTML | CSS | Javascript | Laravel | MySQL</p>
+            <p class="fs-5">- Content Creation = Capcut | Canva</p>
           </div>
         </div>
       </div>
@@ -80,7 +95,7 @@
         <path
           fill="#a2d9ff"
           fill-opacity="1"
-          d="M0,32L48,74.7C96,117,192,203,288,202.7C384,203,480,117,576,117.3C672,117,768,203,864,208C960,213,1056,139,1152,122.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,202.7C672,224,768,224,864,224C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
     </section>
@@ -91,57 +106,58 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>My Projects</h2>
+            <h2>Portofolio</h2>
+            <p class="lead fs-2 text-muted"><strong>Projek Terbaru</strong></p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
             <div class="card">
-              <img src="img/gallery/tailwindcss2.png" class="card-img-top" alt="Project 1" />
+              <img src="img/gallery/personalbranding.png" class="card-img-top" alt="Personal Branding" />
               <div class="card-body">
-                <h5 class="card-title">This is my project</h5>
-                <p class="card-text">Some quick example text to build on the This is my project and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title truncate">Personal Branding</h5>
+                <p class="card-text">Saya membangun personal brand di instagram sejak bulan Juli 2023 sampai saat ini. Kalian bisa cek username instagram saya yaitu @bahaskoding</p>
+                <a href="https://www.instagram.com/bahaskoding/" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
             <div class="card">
-              <img src="img/gallery/tailwindcss2.png" class="card-img-top" alt="Project 2" />
+              <img src="img/gallery/tailwind.png" class="card-img-top" alt="Personal Website" />
               <div class="card-body">
-                <h5 class="card-title">This is my project</h5>
-                <p class="card-text">Some quick example text to build on the This is my project and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title truncate">Personal Website</h5>
+                <p class="card-text">Saya membuat personal website menggunakan TailwindCSS</p>
+                <a href="https://bahaskoding.github.io/portfolio/" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
             <div class="card">
-              <img src="img/gallery/tailwindcss2.png" class="card-img-top" alt="Project 3" />
+              <img src="img/gallery/laract-penilaian-siswa.png" class="card-img-top" alt="Project 3" />
               <div class="card-body">
-                <h5 class="card-title">This is my project</h5>
-                <p class="card-text">Some quick example text to build on the This is my project and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title truncate">Aplikasi Penilaian Siswa</h5>
+                <p class="card-text">Sebagai syarat kelulusan SMK, saya membangun aplikasi penilaian siswa yang mencakup fitur Auth dan CRUD menggunakan Laravel dan React untuk menyelesaikan ujikom</p>
+                <a href="#" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delya="400">
             <div class="card">
-              <img src="img/gallery/tailwindcss2.png" class="card-img-top" alt="Project 4" />
+              <img src="img/gallery/inventaris-buku.png" class="card-img-top" alt="Project 4" />
               <div class="card-body">
-                <h5 class="card-title">This is my project</h5>
-                <p class="card-text">Some quick example text to build on the This is my project and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title truncate">Aplikasi Inventaris Buku</h5>
+                <p class="card-text">Projek yang dikembangkan disaat PKL</p>
+                <a href="#" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delya="500">
             <div class="card">
-              <img src="img/gallery/tailwindcss2.png" class="card-img-top" alt="Project 5" />
+              <img src="img/gallery/bootstrap5.png" class="card-img-top" alt="Project 5" />
               <div class="card-body">
-                <h5 class="card-title">This is my project</h5>
-                <p class="card-text">Some quick example text to build on the This is my project and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title truncate">Landing Page</h5>
+                <p class="card-text">Website yang dikembangkan menggunakan Bootstrap 5</p>
+                <a href="#" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
@@ -151,14 +167,14 @@
         <path
           fill="#ffffff"
           fill-opacity="1"
-          d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,234.7C672,245,768,203,864,154.7C960,107,1056,53,1152,64C1248,75,1344,149,1392,186.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,202.7C672,224,768,224,864,224C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
     </section>
     <!-- Project End -->
 
     <!-- Gallery Start-->
-    <section id="gallery">
+    <!-- <section id="gallery">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
@@ -173,7 +189,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Gallery End -->
 
     <!-- Contact Start -->
@@ -181,7 +197,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2>Hubungi Kami</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -208,15 +224,22 @@
         <path
           fill="#0d6efd"
           fill-opacity="1"
-          d="M0,96L48,112C96,128,192,160,288,176C384,192,480,192,576,170.7C672,149,768,107,864,112C960,117,1056,171,1152,165.3C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          d="M0,128L48,122.7C96,117,192,107,288,122.7C384,139,480,181,576,202.7C672,224,768,224,864,224C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
     </section>
     <!-- Contact End-->
 
     <!-- Footer Start -->
-    <footer class="bg-primary text-center text-white fw-bold pb-5">
-      <p>Created with ❤ by <a href="https://instagram.com/bahaskoding/" target="_blank" class="text-white">Rai</a></p>
+    <footer class="bg-primary text-center text-dark fw-bold pb-5">
+      <!-- <p>Created with ❤ by <a href="https://instagram.com/bahaskoding/" target="_blank" class="text-white">Rai</a></p> -->
+      <p>&copy;2024 <a target="_blank" class="text-dark" href="https://instagram.com/bahaskoding/">BahasKoding</a>. All rights reserved</p>
+      <!-- <svg role="img" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>GitHub</title>
+        <path
+          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+        />
+      </svg> -->
     </footer>
     <!-- Footer End -->
 
