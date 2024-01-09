@@ -50,12 +50,12 @@
 
     <!-- Jumbotron Start -->
     <section class="jumbotron text-center" id="home">
-      <img src="img/raiblob2.png" alt="Rai Rakhmat" width="350" class="mb-3" />
+      <img src="img/rai.png" alt="Rai Rakhmat" width="350" class="mb-3" />
       <h1 class="display-4 mb-3">
         <strong class="fw-normal">Rai Rakhmat</strong>
         <span class="text-muted fw-normal"> Syarifudin Supardi</span>
       </h1>
-      <strong class="lead fs-2 fw-normal">Seorang Mahasiswa & Konten Kreator</strong>
+      <strong class="lead fs-2 fw-normal">Mahasiswa & Konten Kreator</strong>
 
       <svg id="wave" style="transform: rotate(0deg); transition: 0.3s" viewBox="0 0 1440 360" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -232,18 +232,22 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form>
+            <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Pesan sudah terkirim!</strong> Terimakasih ~
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+            <form name="submit-to-google-sheet">
               <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
-                <input type="name" class="form-control" id="nama" />
+                <input type="name" name="nama_lengkap" class="form-control" id="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" />
+                <input type="email" name="email" class="form-control" id="email" />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Pesan</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+                <textarea class="form-control" name="pesan" id="message" rows="3"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">Kirim</button>
             </form>
@@ -263,7 +267,7 @@
     <!-- Footer Start -->
     <footer class="bg-primary text-center text-dark fw-bold pb-5">
       <!-- <p>Created with ❤ by <a href="https://instagram.com/bahaskoding/" target="_blank" class="text-white">Rai</a></p> -->
-      <p>&copy;2024 <a target="_blank" class="text-dark" href="https://instagram.com/bahaskoding/">BahasKoding</a>. All rights reserved</p>
+      <p class="text-white">&copy;2024 <a target="_blank" class="text-white" href="https://instagram.com/bahaskoding/">BahasKoding</a>. All rights reserved</p>
       <!-- <svg role="img" width="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>GitHub</title>
         <path
@@ -285,5 +289,20 @@
       });
     </script>
     <!-- End Script AOS Animate -->
+
+    <!-- Script Form Contact -->
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbx6dj-7w6m6QKsJjNVCUmh1eNJHjEejiHKaQ0yXkurHSOc1LzsC8yAFO0G9ybBKpYpH/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+    <!-- End Script Form Contact -->
   </body>
 </html>
