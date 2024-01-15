@@ -23,7 +23,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#home"
-          ><strong class="fw-normal fs-4"><span class="text-dark">Bahas</span>Koding</strong></a
+          ><strong class="fw-bold fs-4"><span class="text-dark">Bahas</span>Koding</strong></a
         >
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@
         <strong class="fw-normal">Rai Rakhmat</strong>
         <span class="text-muted fw-normal"> Syarifudin Supardi</span>
       </h1>
-      <strong class="lead fs-2 fw-normal">Mahasiswa & Konten Kreator</strong>
+      <strong class="lead fs-3 fw-normal">Mahasiswa 🔹 Web Developer 🔹 Konten Kreator</strong>
 
       <svg id="wave" style="transform: rotate(0deg); transition: 0.3s" viewBox="0 0 1440 360" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -156,7 +156,10 @@
               <img src="img/gallery/personalbranding.png" class="card-img-top" alt="Personal Branding" />
               <div class="card-body">
                 <h5 class="card-title truncate">Personal Branding</h5>
-                <p class="card-text">Saya membangun personal brand di instagram sejak bulan Juli 2023 sampai saat ini. Kalian bisa cek username instagram saya yaitu @bahaskoding</p>
+                <p class="card-text">
+                  Saya membangun personal brand di instagram sejak bulan Juli 2023 sampai saat ini. Kalian bisa cek username instagram saya yaitu
+                  <a href="https://www.instagram.com/bahaskoding/" target="_blank" class="fw-bold text-dark" style="text-decoration: none">@bahaskoding</a>
+                </p>
                 <a href="https://www.instagram.com/bahaskoding/" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
@@ -166,28 +169,22 @@
               <img src="img/gallery/tailwind.png" class="card-img-top" alt="Personal Website" />
               <div class="card-body">
                 <h5 class="card-title truncate">Personal Website</h5>
-                <p class="card-text">Saya membuat personal website menggunakan TailwindCSS</p>
+                <p class="card-text">
+                  Mendevelop personal website untuk mendeskripsikan minat dan bakat saya. Website ini dibuat menggunakan Modern Framework CSS, yaitu TailwindCSS. Kalian bisa cek website ini dengan klik tombol dibawah ini
+                </p>
                 <a href="https://bahaskoding.github.io/portfolio/" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
           <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
             <div class="card">
-              <img src="img/gallery/laract-penilaian-siswa.png" class="card-img-top" alt="Project 3" />
+              <img src="img/gallery/crudLaravel.png" class="card-img-top" alt="Project 3" />
               <div class="card-body">
-                <h5 class="card-title truncate">Aplikasi Penilaian Siswa</h5>
-                <p class="card-text">Sebagai syarat kelulusan SMK, saya membangun aplikasi penilaian siswa yang mencakup fitur Auth dan CRUD menggunakan Laravel dan React untuk menyelesaikan ujikom</p>
-                <a href="#" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-duration="500" data-aos-delya="400">
-            <div class="card">
-              <img src="img/gallery/inventaris-buku.png" class="card-img-top" alt="Project 4" />
-              <div class="card-body">
-                <h5 class="card-title truncate">Aplikasi Inventaris Buku</h5>
-                <p class="card-text">Projek yang dikembangkan disaat PKL</p>
-                <a href="#" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
+                <h5 class="card-title truncate">Web App Hotel Sederhana</h5>
+                <p class="card-text">
+                  Aplikasi sederhana yang mencakup fitur Registrasi, Login dan CRUD sederhana yang saya develop menggunakan Laravel 10 dengan bantuan Bootstrap 5. yang bisa dilihat repository githubnya dengan cara klik tombol dibawah ini
+                </p>
+                <a href="https://github.com/BahasKoding/laravel" target="_blank" class="btn btn-primary">Klik untuk melihat</a>
               </div>
             </div>
           </div>
@@ -232,10 +229,10 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Pesan sudah terkirim!</strong> Terimakasih ~
+            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+              <strong>Terimakasih ~</strong> Pesan sudah terkirim!
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div> -->
+            </div>
             <form name="submit-to-google-sheet">
               <div class="mb-3">
                 <label for="nama" class="form-label">Nama Lengkap</label>
@@ -249,7 +246,12 @@
                 <label for="message" class="form-label">Pesan</label>
                 <textarea class="form-control" name="pesan" id="message" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+
+              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -291,15 +293,30 @@
     <!-- End Script AOS Animate -->
 
     <!-- Script Form Contact -->
-
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbx6dj-7w6m6QKsJjNVCUmh1eNJHjEejiHKaQ0yXkurHSOc1LzsC8yAFO0G9ybBKpYpH/exec";
       const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".alert");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+        // Ketika tombol sudah di klik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => console.log("Success!", response))
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // Alert
+            alert.classList.toggle("d-none");
+            // reset form
+            form.reset();
+            console.log("Success!", response);
+          })
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
